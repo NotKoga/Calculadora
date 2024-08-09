@@ -47,10 +47,21 @@ tk.Entry(root, textvariable=entrada1).grid(row=0, column=1)
 tk.Label(root,text="Segundo n°: ").grid(row=1, column=0)
 tk.Entry(root, textvariable=entrada2).grid(row=1, column=1)
 
-tk.Button(root, text="+", command=adicionar).grid(row=0, column=3)
-tk.Button(root, text="-", command=subtrair).grid(row=0, column=4)
-tk.Button(root, text="x", command=multiplicar).grid(row=1, column=3)
-tk.Button(root, text=":", command=dividir).grid(row=1, column=4)
+button_style = {
+    'font': ('Arial', 16),
+    'bg': '#9b6d9e',
+    'fg': '#ffffff',
+    'relief': 'ridge',
+    'bd': 3,
+    'width': 1,
+    'height': 1
+
+}
+
+tk.Button(root, text="+", command=adicionar, **button_style).grid(row=0, column=3)
+tk.Button(root, text="-", command=subtrair, **button_style).grid(row=0, column=4)
+tk.Button(root, text="x", command=multiplicar, **button_style).grid(row=1, column=3)
+tk.Button(root, text=":", command=dividir, **button_style).grid(row=1, column=4)
 
 tk.Label(root, text="Resultado: ").grid(row=3, column=0)
 tk.Entry(root, textvariable=resultado, state='readonly').grid(row=3, column=1)
