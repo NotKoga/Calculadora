@@ -52,7 +52,7 @@ button_style = {
     'bg': '#9b6d9e',
     'fg': '#ffffff',
     'relief': 'ridge',
-    'bd': 3,
+    'bd': 2,
     'width': 1,
     'height': 1
 
